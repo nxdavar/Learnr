@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "315786080080",
+    "firebase_url": "https://learnr-c15db.firebaseio.com",
+    "project_id": "learnr-c15db",
+    "storage_bucket": "learnr-c15db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315786080080:android:abcf886235807a5dd08655",
+        "android_client_info": {
+          "package_name": "com.example.learnr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315786080080-n7fimib9stodb5l90lgjtbnbo0aln72r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.learnr",
+            "certificate_hash": "492cfdd08a4f434a9dfdfda1f8eaa10194c6f9da"
+          }
+        },
+        {
+          "client_id": "315786080080-lftb17icqdh6orcklnt5d45f3o8ta6mc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGjjC_VmFmSA0_F46S-n-DUYL6s_XrGFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315786080080-lftb17icqdh6orcklnt5d45f3o8ta6mc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "315786080080-bindf6ua5m17ulvts0fesj9vitokinff.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.learnr"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

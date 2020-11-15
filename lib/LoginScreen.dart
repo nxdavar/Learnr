@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learnr/LevelOfEducation.dart';
 import 'package:learnr/other.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -6,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:learnr/signin_dart.dart';
 import 'package:learnr/NavBar.dart';
+import 'package:learnr/themeData.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = 'login';
@@ -15,8 +17,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  Color lightGrey = Color(0xFFC7CED1);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -76,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) {
-                              return Nav();
+                              return LevelOfEducation();
                             },
                           ),
                         );

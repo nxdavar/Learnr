@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:learnr/LoginScreen.dart';
+import 'package:learnr/signin_dart.dart';
 
 class SettingsPage extends StatefulWidget {
   @override
@@ -6,9 +8,6 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  static const SECONDARY_COLOR = const Color(0xFF9CB8E4);
-  static const NAV_BAR_COLOR = const Color(0xFFC4C4C4);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +21,24 @@ class _SettingsPageState extends State<SettingsPage> {
       ),
       body: Center(
         child: Container(
-          child: Text('This do be the profile screen'),
+          child: RaisedButton(
+            color: Colors.red,
+            child: Text(
+              'LOG OUT',
+              style: TextStyle(
+                  fontFamily: 'OpenSans', fontWeight: FontWeight.bold),
+            ),
+            onPressed: () {
+              signOutGoogle();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return LoginScreen();
+                  },
+                ),
+              );
+            },
+          ),
         ),
       ),
     );

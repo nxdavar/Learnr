@@ -3,6 +3,7 @@ import 'package:learnr/StudyRequests.dart';
 import 'package:learnr/HomeScreen.dart';
 import 'package:learnr/ProfileScreen.dart';
 import 'package:learnr/MessagesScreen.dart';
+import 'package:learnr/themeData.dart';
 import 'package:flutter/services.dart';
 import 'package:learnr/SettingsPage.dart';
 
@@ -26,9 +27,6 @@ class _NavState extends State<Nav> {
       _selectedIndex = index;
     });
   }
-
-  static const SECONDARY_COLOR = const Color(0xFF9CB8E4);
-  static const NAV_BAR_COLOR = const Color(0xFFC4C4C4);
 
   @override
   Widget build(BuildContext context) {

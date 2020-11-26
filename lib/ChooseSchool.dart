@@ -1,9 +1,9 @@
 import 'dart:core';
-
 import 'package:flutter/material.dart';
 import 'package:learnr/ChooseClasses.dart';
 import 'package:learnr/themeData.dart';
 import 'package:learnr/CommonWidgets.dart';
+import 'package:learnr/sign_in.dart';
 
 // this will be used to allow users to choose
 // a different school
@@ -70,6 +70,7 @@ class ChooseSchool extends StatefulWidget {
 }
 
 class _ChooseSchoolState extends State<ChooseSchool> {
+  String userPhoto = getPhotoUrl();
   bool cramSelected = false;
   bool consistentSelected = false;
   bool noteTaker = false;
@@ -170,12 +171,14 @@ class _ChooseSchoolState extends State<ChooseSchool> {
               child: Container(),
             ),
             Expanded(
-                flex: 1,
-                child: CircleAvatar(
-                  radius: 50,
-                  backgroundColor: Colors.grey,
-                  child: Image.asset('images/blank_profile.png'),
-                )),
+              flex: 1,
+              child: ClipOval(
+                child: Image.network(
+                  userPhoto,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
             SizedBox(
               height: 50,
             ),

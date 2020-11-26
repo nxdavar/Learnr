@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learnr/LoginScreen.dart';
-import 'package:learnr/signin_dart.dart';
+import 'package:learnr/sign_in.dart';
 
 class SettingsPage extends StatefulWidget {
   @override

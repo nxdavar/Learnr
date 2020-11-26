@@ -124,26 +124,39 @@ class _ChooseClassesState extends State<ChooseClasses> {
                         padding: const EdgeInsets.fromLTRB(25.0, 0, 0, 15.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: LIGHT_BLUE,
-                            borderRadius: BorderRadius.circular(10.0),
+                            color: Colors.white,
+                            border: Border.all(color: Colors.black, width: 1.0),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0)),
                           ),
                           height: 150,
-                          width: 375,
+                          width: 390,
                           child: ListView(
                             children: [
-                              Card(
-                                child: ListTile(
-                                  title: Text('MIS 321'),
+                              Container(
+                                child: Card(
+                                  child: Container(
+                                    color: LIGHT_BLUE,
+                                    child: ListTile(
+                                      title: Text('MIS 321'),
+                                    ),
+                                  ),
                                 ),
                               ),
                               Card(
-                                child: ListTile(
-                                  title: Text('RHE 309'),
+                                child: Container(
+                                  color: LIGHT_BLUE,
+                                  child: ListTile(
+                                    title: Text('RHE 309'),
+                                  ),
                                 ),
                               ),
                               Card(
-                                child: ListTile(
-                                  title: Text('BIO 465'),
+                                child: Container(
+                                  color: LIGHT_BLUE,
+                                  child: ListTile(
+                                    title: Text('BIO 465'),
+                                  ),
                                 ),
                               ),
                             ],

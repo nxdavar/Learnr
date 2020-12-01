@@ -12,6 +12,55 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
+SizedBox spacing(double height) {
+  return SizedBox(
+    height: height,
+  );
+}
+
+SizedBox card(String text) {
+  return SizedBox(
+    height: 75,
+    width: 180,
+    child: ReusableCard(
+      colour: LIGHT_BLUE,
+      cardChild: Center(
+        child: Text(
+          text,
+          style: TextStyle(
+              fontSize: 18,
+              fontFamily: 'OpenSans',
+              fontWeight: FontWeight.bold),
+        ),
+      ),
+    ),
+  );
+}
+
+Text belowPicText(String text) {
+  return Text(
+    text,
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      color: Colors.black,
+      fontFamily: 'openSans',
+      fontSize: 15,
+      fontWeight: FontWeight.bold,
+    ),
+  );
+}
+
+TextButton icon(IconData image, Color color) {
+  return TextButton(
+    child: Icon(
+      image,
+      color: color,
+      size: 100,
+    ),
+    onPressed: () {},
+  );
+}
+
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
@@ -49,9 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: Column(
           children: <Widget>[
-            SizedBox(
-              height: 50,
-            ),
+            spacing(50), // calls helper method to create sized box
             Center(
               child: Container(
                 child: Image(
@@ -66,45 +113,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 5,
-            ),
-            Text(
-              'Name: Nitin Naresh',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'openSans',
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Text(
-              'Major: Computer Science',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'openSans',
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Text(
-              'Year: Freshman',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'openSans',
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            spacing(5),
+            belowPicText('Name: Nitin Naresh'),
+            spacing(5),
+            belowPicText('Major: Computer Science'),
+            spacing(5),
+            belowPicText('Year: Freshman'),
             Bubble(
               alignment: Alignment.center,
               color: LIGHT_BLUE,
@@ -115,10 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 'Looking for a partner for pair programming assignments, '
                 'or someone who wants to learn a new language! Preferably'
                 ' Python, but I\'m looking for more experience in general!',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontFamily: 'openSans',
-                ),
+                style: TextStyle(fontSize: 15, fontFamily: 'openSans'),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -135,60 +146,16 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(
-                  height: 75,
-                  width: 180,
-                  child: ReusableCard(
-                    colour: LIGHT_BLUE,
-                    cardChild: Center(
-                      child: Text(
-                        'Cram',
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontFamily: 'OpenSans',
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 75,
-                  width: 180,
-                  child: ReusableCard(
-                    colour: LIGHT_BLUE,
-                    cardChild: Center(
-                      child: Text(
-                        'Consistent',
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontFamily: 'OpenSans',
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                ),
+                card('Cram'),
+                card('Extrovert'),
               ],
             ),
             SizedBox(width: 5),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                TextButton(
-                  child: Icon(
-                    Icons.check_circle_outline_sharp,
-                    color: Colors.green,
-                    size: 100,
-                  ),
-                  onPressed: () {},
-                ),
-                TextButton(
-                  child: Icon(
-                    Icons.do_not_disturb,
-                    color: Colors.red,
-                    size: 100,
-                  ),
-                  onPressed: () {},
-                ),
+                icon(Icons.check_circle_outline_sharp, Colors.green),
+                icon(Icons.do_not_disturb, Colors.red),
               ],
             ),
           ],

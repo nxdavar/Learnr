@@ -4,8 +4,6 @@ import 'package:learnr/HomeScreen.dart';
 import 'package:learnr/ProfileScreen.dart';
 import 'package:learnr/MessagesScreen.dart';
 import 'package:learnr/themeData.dart';
-import 'package:flutter/services.dart';
-import 'package:learnr/SettingsPage.dart';
 
 class Nav extends StatefulWidget {
   static const String id = 'navigation';
@@ -44,14 +42,14 @@ class _NavState extends State<Nav> {
           child: BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                  icon: Icon(Icons.message), title: Text('Messages')),
+                  icon: Icon(Icons.message), label: 'Messages'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.home), title: Text('Home')),
+                  icon: Icon(Icons.home), label: 'Home'),
               BottomNavigationBarItem(
                   icon: Icon(Icons.quick_contacts_mail_sharp),
-                  title: Text('Learnr Requests')),
+                  label: 'Learnr Requests'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.person), title: Text('Profile')),
+                  icon: Icon(Icons.person), label: 'Profile'),
             ],
             backgroundColor: NAV_BAR_COLOR,
             currentIndex: _selectedIndex,

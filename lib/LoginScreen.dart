@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learnr/LevelOfEducation.dart';
-import 'package:learnr/other.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:learnr/NavBar.dart';
 import 'package:learnr/themeData.dart';
 import 'package:learnr/sign_in.dart';
-import 'package:learnr/addInfo.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = 'login';

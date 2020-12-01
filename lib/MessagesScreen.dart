@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:learnr/themeData.dart';
 import 'package:learnr/SettingsPage.dart';
+import 'package:learnr/ChatModel.dart';
 
 class MessagesScreen extends StatefulWidget {
+  static const String id = 'messages';
   @override
   _MessagesScreenState createState() => _MessagesScreenState();
 }
@@ -23,7 +25,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
             Expanded(
               flex: 2,
               child: Text(
-                'Learnr',
+                'Messages',
                 style: TextStyle(
                   fontSize: 24.0,
                   letterSpacing: 1.5,
@@ -53,9 +55,44 @@ class _MessagesScreenState extends State<MessagesScreen> {
           ],
         ),
       ),
-      body: Center(
+      body: SafeArea(
         child: Container(
-          child: Text('This do be the messages screen'),
+          child: ListView.builder(
+            itemCount: ChatModel.dummyData.length,
+            itemBuilder: (context, index) {
+              ChatModel _model = ChatModel.dummyData[index];
+              return Column(
+                children: <Widget>[
+                  Divider(
+                    height: 12.0,
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(
+                      radius: 24.0,
+                      backgroundImage: NetworkImage(_model.avatarUrl),
+                    ),
+                    title: Row(
+                      children: <Widget>[
+                        Text(_model.name),
+                        SizedBox(
+                          width: 16.0,
+                        ),
+                        Text(
+                          _model.datetime,
+                          style: TextStyle(fontSize: 12.0),
+                        ),
+                      ],
+                    ),
+                    subtitle: Text(_model.message),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      size: 14.0,
+                    ),
+                  ),
+                ],
+              );
+            },
+          ),
         ),
       ),
     );

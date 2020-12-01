@@ -3,7 +3,6 @@ import 'package:learnr/editProfile.dart';
 import 'package:learnr/themeData.dart';
 import 'package:learnr/SettingsPage.dart';
 import 'package:learnr/sign_in.dart';
-import 'package:learnr/themeData.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override

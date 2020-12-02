@@ -12,6 +12,16 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
+ListTile header(String text) {
+  return ListTile(
+    title: Text(text,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          fontSize: 20,
+        )),
+  );
+}
+
 SizedBox spacing(double height) {
   return SizedBox(
     height: height,
@@ -37,14 +47,28 @@ SizedBox card(String text) {
   );
 }
 
-Text belowPicText(String text) {
+Card classes(String course) {
+  return Card(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(15),
+    ),
+    color: LIGHT_BLUE,
+    child: ListTile(
+      title: Text(course,
+          textAlign: TextAlign.center, style: TextStyle(fontSize: 20)),
+    ),
+    margin: EdgeInsets.fromLTRB(30, 0, 30, 15),
+  );
+}
+
+Text belowPicText(String text, double fontSize) {
   return Text(
     text,
     textAlign: TextAlign.center,
     style: TextStyle(
       color: Colors.black,
       fontFamily: 'openSans',
-      fontSize: 15,
+      fontSize: fontSize,
       fontWeight: FontWeight.bold,
     ),
   );
@@ -71,10 +95,14 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {},
-            ),
+            Builder(builder: (BuildContext context) {
+              return IconButton(
+                icon: Icon(Icons.menu),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+              );
+            }),
             Text(
               'Learnr',
               style: TextStyle(
@@ -107,18 +135,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 250,
                 ),
                 decoration: BoxDecoration(
-                  border: Border.all(
-                    width: 2,
-                  ),
+                  border: Border.all(width: 2),
                 ),
               ),
             ),
             spacing(5),
-            belowPicText('Name: Nitin Naresh'),
+            belowPicText('Name: Nitin Naresh', 15),
             spacing(5),
-            belowPicText('Major: Computer Science'),
+            belowPicText('Major: Computer Science', 15),
             spacing(5),
-            belowPicText('Year: Freshman'),
+            belowPicText('Year: Freshman', 15),
             Bubble(
               alignment: Alignment.center,
               color: LIGHT_BLUE,
@@ -133,16 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 textAlign: TextAlign.center,
               ),
             ),
-            Text(
-              'Personality Tags: ',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'openSans',
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            belowPicText('Personality Tags: ', 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -158,6 +175,75 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon(Icons.do_not_disturb, Colors.red),
               ],
             ),
+          ],
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            Container(
+              height: 150.0,
+              child: DrawerHeader(
+                child: Text(
+                  'Filters',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25.0),
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                padding: EdgeInsets.fromLTRB(5, 30, 5, 5),
+              ),
+            ),
+            header('Change Classes'),
+            Padding(
+              // Search bar
+              padding: const EdgeInsets.fromLTRB(8, 15, 8, 8),
+              child: Container(
+                margin: EdgeInsets.only(left: 10, right: 10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  color: Colors.white,
+                  border: Border.all(color: Colors.black, width: 0.0),
+                ),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: LIGHT_BLUE,
+                      ),
+                      width: 400,
+                      child: TextField(
+                        onChanged: (value) {},
+                        style: TextStyle(color: Colors.black),
+                        decoration: InputDecoration(
+                            hintStyle: TextStyle(color: Color(0xFF4C5156)),
+                            hintText: 'BCH 369, CS 314...',
+                            prefixIcon: Icon(
+                              Icons.search,
+                              color: Colors.black,
+                            ),
+                            border: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10.0)))),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            header('Your Classes'),
+            classes('CS 314'),
+            classes('CS 311'),
+            classes('M408D'),
+            header('Study Habits'),
+            classes('Cram'),
+            classes('Extrovert'),
+            header('Desired Learnr Habits'),
+            classes('Extrovert'),
           ],
         ),
       ),

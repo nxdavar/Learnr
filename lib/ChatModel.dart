@@ -25,5 +25,12 @@ class ChatModel {
       datetime: "4:12 pm",
       message: "Let's do Thursday night around 8!",
     ),
+    ChatModel(
+      avatarUrl: "https://scontent.xx.fbcdn.net/v/t1.15752-0/p280x280/129501635_2728145750834165_8469153588694919158_n.jpg?_nc_cat=100&ccb=2&_nc_sid=ae9488&_nc_ohc=0DD60QzWBVAAX8TBP-k&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=6&oh=e1abc8e9e4d502def1325eb6a036951a&oe=5FEE6C4B",
+      name: "Ritika Palacharla",
+      datetime: "7:53 pm",
+      message: "Yeah, sounds good!",
+    ),
+
   ];
 }

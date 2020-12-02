@@ -186,13 +186,20 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               height: 150.0,
               child: DrawerHeader(
-                child: Text(
-                  'Filters',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 25.0),
+                child: Row(
+                  children: [
+                    SizedBox(width: 100),
+                    Text(
+                      'Filters',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 25.0),
+                    ),
+                    SizedBox(width: 80),
+                    Icon(Icons.menu),
+                  ],
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: DARK_BLUE,
                 ),
                 padding: EdgeInsets.fromLTRB(5, 30, 5, 5),
               ),

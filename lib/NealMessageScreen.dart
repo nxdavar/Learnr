@@ -79,11 +79,8 @@ class _NealMessageScreenState extends State<NealMessageScreen> {
                       "https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-0/p280x280/128687479_2860104237606373_1210815728475186783"
                       "_n.jpg?_nc_cat=103&ccb=2&_nc_sid=ae9488&_nc_ohc=OAWCsznd7ksAX9kF63k&_nc_ht=scontent-dfw5-1.xx&tp=6&oh=00d2cfef2"
                       "ffd2f3e70b3b82120a45075&oe=5FE9E60B"),
-                  title: Text('          Neal Dawar', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, fontFamily: 'OpenSans')),
+                  title: Text('          Neal Davar', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, fontFamily: 'OpenSans')),
                   tileColor: DARK_GREY,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100),
-                  ),
                 ),
               ),
               SizedBox(height: 20),

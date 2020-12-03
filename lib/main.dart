@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learnr/ChooseSchool.dart';
 import 'package:learnr/LevelOfEducation.dart';
 import 'package:learnr/MessagesScreen.dart';
+import 'package:learnr/NealMessageScreen.dart';
 import 'LoginScreen.dart';
 import 'package:learnr/PersonalityTags.dart';
 import 'package:learnr/editProfile.dart';
@@ -19,7 +20,7 @@ class MainScreen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //initialRoute: WelcomeScreen.id,
-      initialRoute: HomeScreen.id,
+      initialRoute: NealMessageScreen.id,
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
         // When navigating to the "/second" route, build the SecondScreen widget.
@@ -27,6 +28,7 @@ class MainScreen extends StatelessWidget {
         HomeScreen.id: (context) => HomeScreen(),
         MessagesScreen.id: (context) => MessagesScreen(),
         OtherPage.id: (context) => OtherPage(),
+        NealMessageScreen.id: (context) => NealMessageScreen(),
         Nav.id: (context) => Nav(),
         //CRUDTest.id: (context) => CRUDTest(),
         LevelOfEducation.id: (context) => LevelOfEducation(),

@@ -8,13 +8,17 @@ class ChatModel {
 
   static final List<ChatModel> dummyData = [
     ChatModel(
-      avatarUrl: "https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-0/p280x280/128797483_423294492161746_1550795826213080806_n.png?_nc_cat=111&ccb=2&_nc_sid=ae9488&_nc_ohc=upBRbFodsGEAX8LKMn3&_nc_ht=scontent-dfw5-1.xx&oh=8a9c5111e4b8bca1daab4e2a4417dd36&oe=5FECE639",
+      avatarUrl: "https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-0/p280x280/128797483_423294492161746_1550795826213080806"
+          "_n.png?_nc_cat=111&ccb=2&_nc_sid=ae9488&_nc_ohc=upBRbFodsGEAX8LKMn3&_nc_ht=scontent-dfw5-1.xx&oh=8a9c5111e4b8b"
+          "ca1daab4e2a4417dd36&oe=5FECE639",
       name: "Ashley Hsiung",
       datetime: "8:18 pm",
       message: "When do you want to study?",
     ),
     ChatModel(
-      avatarUrl: "https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-0/p280x280/128687479_2860104237606373_1210815728475186783_n.jpg?_nc_cat=103&ccb=2&_nc_sid=ae9488&_nc_ohc=OAWCsznd7ksAX9kF63k&_nc_ht=scontent-dfw5-1.xx&tp=6&oh=00d2cfef2ffd2f3e70b3b82120a45075&oe=5FE9E60B",
+      avatarUrl: "https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-0/p280x280/128687479_2860104237606373_1210815728475186783"
+          "_n.jpg?_nc_cat=103&ccb=2&_nc_sid=ae9488&_nc_ohc=OAWCsznd7ksAX9kF63k&_nc_ht=scontent-dfw5-1.xx&tp=6&oh=00d2cfef2"
+          "ffd2f3e70b3b82120a45075&oe=5FE9E60B",
       name: "Neal Davar",
       datetime: "6:12 pm",
       message: "7 tomorrow works great for me!",

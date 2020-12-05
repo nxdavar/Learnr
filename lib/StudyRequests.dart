@@ -3,7 +3,6 @@ import 'package:learnr/themeData.dart';
 import 'package:learnr/SettingsPage.dart';
 
 class StudyRequests extends StatefulWidget {
-  static const String id = 'requests';
   @override
   static const String id = 'StudyRequests';
   _StudyRequestsState createState() => _StudyRequestsState();
@@ -71,10 +70,10 @@ class _StudyRequestsState extends State<StudyRequests> {
                   title: Row(
                     children: <Widget>[
                       SizedBox(width: 30),
-                      Icon(Icons.do_not_disturb, color: Colors.red),
-                      SizedBox(width: 30),
                       Text('Neal Davar',
                           style: TextStyle(fontSize: 20.0)),
+                      SizedBox(width: 30),
+                      Icon(Icons.do_not_disturb, color: Colors.red),
                       SizedBox(width: 30),
                       Icon(Icons.check, color: Colors.green),
                     ],
@@ -95,10 +94,10 @@ class _StudyRequestsState extends State<StudyRequests> {
                   title: Row(
                     children: <Widget>[
                       SizedBox(width: 30),
-                      Icon(Icons.do_not_disturb, color: Colors.red),
-                      SizedBox(width: 30),
-                      Text('Jenny Vu',
+                      Text('Jenny Park',
                           style: TextStyle(fontSize: 20.0)),
+                      SizedBox(width: 30),
+                      Icon(Icons.do_not_disturb, color: Colors.red),
                       SizedBox(width: 30),
                       Icon(Icons.check, color: Colors.green),
                     ],
@@ -119,10 +118,10 @@ class _StudyRequestsState extends State<StudyRequests> {
                   title: Row(
                     children: <Widget>[
                       SizedBox(width: 30),
-                      Icon(Icons.do_not_disturb, color: Colors.red),
-                      SizedBox(width: 30),
                       Text('Mark Jones',
                           style: TextStyle(fontSize: 20.0)),
+                      SizedBox(width: 26),
+                      Icon(Icons.do_not_disturb, color: Colors.red),
                       SizedBox(width: 30),
                       Icon(Icons.check, color: Colors.green),
                     ],

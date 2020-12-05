@@ -85,7 +85,7 @@ class _NealMessageScreenState extends State<NealMessageScreen> {
               ),
               SizedBox(height: 20),
               addText('You\'ve matched!', Alignment.center, LIGHT_BLUE, null),
-              addText('Hey, I\'m Nitin!', Alignment.topRight, DARK_GREY,
+/*              addText('Hey, I\'m Nitin!', Alignment.topRight, DARK_GREY,
                   BubbleNip.rightTop),
               addText('Hey, I\'m Neal! What do you wanna work on?',
                   Alignment.topLeft, LIGHT_GREY, BubbleNip.leftTop),
@@ -105,7 +105,7 @@ class _NealMessageScreenState extends State<NealMessageScreen> {
               addText('Let\'s do Saturday at 8 pm then.', Alignment.topLeft,
                   LIGHT_GREY, BubbleNip.leftTop),
               addText('Alright, I\'ll see you there man!', Alignment.topRight,
-                  DARK_GREY, BubbleNip.rightTop),
+                  DARK_GREY, BubbleNip.rightTop),*/
               SizedBox(height: 30),
               Padding(
                 // Search bar

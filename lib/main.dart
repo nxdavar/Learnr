@@ -20,7 +20,7 @@ class MainScreen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //initialRoute: WelcomeScreen.id,
-      initialRoute: NealMessageScreen.id,
+      initialRoute: MessagesScreen.id,
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
         // When navigating to the "/second" route, build the SecondScreen widget.

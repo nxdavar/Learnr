@@ -64,7 +64,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
               return Column(
                 children: <Widget>[
                   Divider(
-                    height: 12.0,
+                    height: 20.0,
                   ),
                   ListTile(
                     leading: CircleAvatar(
@@ -73,20 +73,22 @@ class _MessagesScreenState extends State<MessagesScreen> {
                     ),
                     title: Row(
                       children: <Widget>[
-                        Text(_model.name),
+                        Text(_model.name,
+                        style: TextStyle(fontSize: 20.0)),
                         SizedBox(
                           width: 16.0,
                         ),
                         Text(
                           _model.datetime,
-                          style: TextStyle(fontSize: 12.0),
+                          style: TextStyle(fontSize: 18.0),
                         ),
                       ],
                     ),
-                    subtitle: Text(_model.message),
+                    subtitle: Text(_model.message,
+                    style: TextStyle(fontSize: 14.0)),
                     trailing: Icon(
                       Icons.arrow_forward_ios,
-                      size: 14.0,
+                      size: 16.0,
                     ),
                   ),
                 ],

@@ -11,6 +11,7 @@ import 'package:learnr/NavBar.dart';
 import 'package:learnr/LearnrTags.dart';
 import 'package:learnr/ChooseClasses.dart';
 import 'package:learnr/HomeScreen.dart';
+import 'StudyRequests.dart';
 
 void main() => runApp(MainScreen());
 
@@ -20,13 +21,14 @@ class MainScreen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //initialRoute: WelcomeScreen.id,
-      initialRoute: MessagesScreen.id,
+      initialRoute: StudyRequests.id,
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
         // When navigating to the "/second" route, build the SecondScreen widget.
         LoginScreen.id: (context) => LoginScreen(),
         HomeScreen.id: (context) => HomeScreen(),
         MessagesScreen.id: (context) => MessagesScreen(),
+        StudyRequests.id: (context) => StudyRequests(),
         OtherPage.id: (context) => OtherPage(),
         NealMessageScreen.id: (context) => NealMessageScreen(),
         Nav.id: (context) => Nav(),

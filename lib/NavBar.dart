@@ -4,6 +4,7 @@ import 'package:learnr/HomeScreen.dart';
 import 'package:learnr/ProfileScreen.dart';
 import 'package:learnr/MessagesScreen.dart';
 import 'package:learnr/themeData.dart';
+import 'package:learnr/HomeScreenAlternative.dart';
 
 class Nav extends StatefulWidget {
   static const String id = 'navigation';
@@ -15,7 +16,7 @@ class _NavState extends State<Nav> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
     MessagesScreen(),
-    HomeScreen(),
+    HomeScreenAlternative(),
     StudyRequests(),
     ProfileScreen(),
   ];
@@ -43,8 +44,7 @@ class _NavState extends State<Nav> {
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                   icon: Icon(Icons.message), label: 'Messages'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.home), label: 'Home'),
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
               BottomNavigationBarItem(
                   icon: Icon(Icons.quick_contacts_mail_sharp),
                   label: 'Learnr Requests'),

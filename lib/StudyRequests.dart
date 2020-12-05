@@ -3,6 +3,7 @@ import 'package:learnr/themeData.dart';
 import 'package:learnr/SettingsPage.dart';
 
 class StudyRequests extends StatefulWidget {
+  static const String id = 'requests';
   @override
   static const String id = 'StudyRequests';
   _StudyRequestsState createState() => _StudyRequestsState();

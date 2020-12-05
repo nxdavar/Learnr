@@ -38,7 +38,7 @@ SizedBox card(String text) {
         child: Text(
           text,
           style: TextStyle(
-              fontSize: 18,
+              fontSize: 16,
               fontFamily: 'OpenSans',
               fontWeight: FontWeight.bold),
         ),

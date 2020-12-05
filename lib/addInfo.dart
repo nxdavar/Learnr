@@ -20,24 +20,3 @@ class DatabaseService {
     });
   }
 }
-
-// Future<void> userSetup(
-// String eduLevel, String lTagOne, String pTagOne) async {
-// CollectionReference users = FirebaseFirestore.instance.collection('Users');
-// FirebaseAuth auth = FirebaseAuth.instance;
-// String displayName = auth.currentUser.displayName.toString();
-// String uid = auth.currentUser.uid.toString();
-// String photoUrl = auth.currentUser.photoURL.toString();
-// // Trying to figure out if a document with a particular user ID exists or not
-// //getDoc(uid);
-// users.add({
-// 'displayName': displayName,
-// 'uid': uid,
-// 'photoUrl': photoUrl,
-// 'eduLevel': eduLevel,
-// 'lTagOne': lTagOne,
-// 'pTagOne': pTagOne,
-// });
-// return;
-// }
-// }

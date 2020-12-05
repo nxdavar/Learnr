@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:learnr/themeData.dart';
 import 'package:learnr/SettingsPage.dart';
 
+import 'NealMessageScreen.dart';
+
 class StudyRequests extends StatefulWidget {
   @override
   static const String id = 'StudyRequests';
@@ -65,17 +67,26 @@ class _StudyRequestsState extends State<StudyRequests> {
                 ListTile(
                   leading: CircleAvatar(
                     radius: 24.0,
-                    backgroundImage: NetworkImage('https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/128687479_2860104237606373_1210815728475186783_n.jpg?_nc_cat=103&ccb=2&_nc_sid=ae9488&_nc_ohc=NO05ccjxRSoAX_FuhKh&_nc_ht=scontent-dfw5-1.xx&tp=7&oh=bb418a9a687ced4378d7cff9420ade31&oe=5FEFBA59'),
+                    backgroundImage: NetworkImage(
+                        'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/128687479_2860104237606373_1210815728475186783_n.jpg?_nc_cat=103&ccb=2&_nc_sid=ae9488&_nc_ohc=NO05ccjxRSoAX_FuhKh&_nc_ht=scontent-dfw5-1.xx&tp=7&oh=bb418a9a687ced4378d7cff9420ade31&oe=5FEFBA59'),
                   ),
                   title: Row(
                     children: <Widget>[
                       SizedBox(width: 30),
-                      Text('Neal Davar',
-                          style: TextStyle(fontSize: 20.0)),
+                      Text('Neal Davar', style: TextStyle(fontSize: 20.0)),
                       SizedBox(width: 30),
                       Icon(Icons.do_not_disturb, color: Colors.red),
                       SizedBox(width: 30),
-                      Icon(Icons.check, color: Colors.green),
+                      IconButton(
+                        icon: Icon(Icons.check),
+                        color: Colors.green,
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NealMessageScreen()));
+                        },
+                      ),
                     ],
                   ),
                   trailing: Icon(
@@ -89,17 +100,26 @@ class _StudyRequestsState extends State<StudyRequests> {
                 ListTile(
                   leading: CircleAvatar(
                     radius: 24.0,
-                    backgroundImage: NetworkImage('https://images.unsplash.com/photo-1592085549692-e936f347b400?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29sbGVnZSUyMHN0dWRlbnR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'),
+                    backgroundImage: NetworkImage(
+                        'https://images.unsplash.com/photo-1592085549692-e936f347b400?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29sbGVnZSUyMHN0dWRlbnR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'),
                   ),
                   title: Row(
                     children: <Widget>[
                       SizedBox(width: 30),
-                      Text('Jenny Park',
-                          style: TextStyle(fontSize: 20.0)),
+                      Text('Jenny Park', style: TextStyle(fontSize: 20.0)),
                       SizedBox(width: 30),
                       Icon(Icons.do_not_disturb, color: Colors.red),
                       SizedBox(width: 30),
-                      Icon(Icons.check, color: Colors.green),
+                      IconButton(
+                        icon: Icon(Icons.check),
+                        color: Colors.green,
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NealMessageScreen()));
+                        },
+                      ),
                     ],
                   ),
                   trailing: Icon(
@@ -113,17 +133,26 @@ class _StudyRequestsState extends State<StudyRequests> {
                 ListTile(
                   leading: CircleAvatar(
                     radius: 24.0,
-                    backgroundImage: NetworkImage('https://images.unsplash.com/photo-1593371545309-559a8cf66fda?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=700&q=80'),
+                    backgroundImage: NetworkImage(
+                        'https://images.unsplash.com/photo-1593371545309-559a8cf66fda?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=700&q=80'),
                   ),
                   title: Row(
                     children: <Widget>[
                       SizedBox(width: 30),
-                      Text('Mark Jones',
-                          style: TextStyle(fontSize: 20.0)),
+                      Text('Mark Jones', style: TextStyle(fontSize: 20.0)),
                       SizedBox(width: 26),
                       Icon(Icons.do_not_disturb, color: Colors.red),
                       SizedBox(width: 30),
-                      Icon(Icons.check, color: Colors.green),
+                      IconButton(
+                        icon: Icon(Icons.check),
+                        color: Colors.green,
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NealMessageScreen()));
+                        },
+                      ),
                     ],
                   ),
                   trailing: Icon(

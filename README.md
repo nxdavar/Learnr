@@ -1,16 +1,9 @@
-# learnr
+# Learnr
 
-A new Flutter application.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Co-developed this application in the Fall of 2020. Learnr is an application that had a goal to connect students to each other so that students could find people to study with. This was something that was especially difficult in the age of COVID when everyone was cooped up in their homes.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<!-- https://i.ibb.co/VYP037g/Simulator-Screen-Shot-i-Phone-12-Pro-Max-2020-12-05-at-17-44-07.png -->
